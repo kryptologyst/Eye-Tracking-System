@@ -1,0 +1,29 @@
+# Eye Tracking Configuration
+model:
+  predictor_path: "data/models/shape_predictor_68_face_landmarks.dat"
+  confidence_threshold: 0.5
+  
+camera:
+  device_id: 0
+  width: 640
+  height: 480
+  fps: 30
+
+eye_tracking:
+  left_eye_points: [36, 37, 38, 39, 40, 41]
+  right_eye_points: [42, 43, 44, 45, 46, 47]
+  pupil_threshold: 70
+  min_contour_area: 50
+  
+visualization:
+  pupil_radius: 5
+  text_scale: 0.5
+  text_thickness: 1
+  colors:
+    left_eye: [0, 255, 0]
+    right_eye: [255, 0, 0]
+    face_box: [255, 255, 0]
+
+logging:
+  level: "INFO"
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name}:{function}:{line} - {message}"
